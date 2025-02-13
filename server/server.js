@@ -19,7 +19,7 @@ app.use(express.json());
 
 // CORS (Sessions erlauben)
 app.use(cors({
-  origin: true, // oder ['http://localhost:5173'] etc.
+  origin: false, // oder ['http://localhost:5173'] etc.
   credentials: true
 }));
 
@@ -35,13 +35,6 @@ app.use(session({
   cookie: {
     maxAge: 1000 * 60 * 60 * 24 // 1 Tag
   }
-}));
-
-const cors = require('cors');
-
-app.use(cors({
-  origin: true,
-  credentials: true
 }));
 
 // SQLite init
