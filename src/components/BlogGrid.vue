@@ -1,6 +1,6 @@
 <template>
   <div class="blog-grid">
-    <h1 class="page-title">Mein Blog</h1>
+    <h1 class="page-title">UwU</h1>
 
     <div class="pinboard">
       <div
