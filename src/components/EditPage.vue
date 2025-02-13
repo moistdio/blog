@@ -53,7 +53,7 @@
   
   async function fetchExistingEntry() {
     try {
-      const res = await fetch(`http://localhost:3000/api/blog-entries`, {
+      const res = await fetch(`https://ikrasblogapi.solidbooru.online/api/blog-entries`, {
         credentials: 'include'
       })
       const allEntries = await res.json()
@@ -85,7 +85,7 @@
     formData.append('caption', updatedCaption.value)
   
     try {
-      const response = await fetch(`http://localhost:3000/api/blog-entries/${entryId}`, {
+      const response = await fetch(`https://ikrasblogapi.solidbooru.online/api/blog-entries/${entryId}`, {
         method: 'PUT',
         credentials: 'include',
         body: formData

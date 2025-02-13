@@ -29,7 +29,7 @@
   async function handleLogin() {
     errorMessage.value = ''
     try {
-      const response = await fetch('http://localhost:3000/api/login', {
+      const response = await fetch('https://ikrasblogapi.solidbooru.online/api/login', {
         method: 'POST',
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },

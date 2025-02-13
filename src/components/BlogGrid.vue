@@ -14,7 +14,7 @@
           <!-- Zeige Thumbnail, falls vorhanden -->
           <img
             v-if="entry.thumbnail_path"
-            :src="`http://localhost:3000/${entry.thumbnail_path}`"
+            :src="`https://ikrasblogapi.solidbooru.online/${entry.thumbnail_path}`"
             alt="Video-Thumbnail"
           />
           <img
@@ -26,7 +26,7 @@
         <template v-else>
           <!-- Bild -->
           <img
-            :src="`http://localhost:3000/${entry.media_path}`"
+            :src="`https://ikrasblogapi.solidbooru.online/${entry.media_path}`"
             alt="Blog-Bild"
           />
         </template>
@@ -74,13 +74,13 @@
             preload="metadata"
             class="modal-image"
           >
-            <source :src="`http://localhost:3000/${selectedEntry.media_path}`" />
+            <source :src="`https://ikrasblogapi.solidbooru.online/${selectedEntry.media_path}`" />
           </video>
 
           <!-- Wenn Bild, dann <img> -->
           <img
             v-else
-            :src="`http://localhost:3000/${selectedEntry.media_path}`"
+            :src="`https://ikrasblogapi.solidbooru.online/${selectedEntry.media_path}`"
             alt="Blog-Bild"
             class="modal-image"
           />
@@ -109,7 +109,7 @@ onMounted(() => {
 
 async function fetchEntries() {
   try {
-    const res = await fetch('http://localhost:3000/api/blog-entries', {
+    const res = await fetch('https://ikrasblogapi.solidbooru.online/api/blog-entries', {
       credentials: 'include'
     })
     blogEntries.value = await res.json()
@@ -120,7 +120,7 @@ async function fetchEntries() {
 
 async function fetchUser() {
   try {
-    const res = await fetch('http://localhost:3000/api/me', {
+    const res = await fetch('https://ikrasblogapi.solidbooru.online/api/me', {
       credentials: 'include'
     })
     if (res.ok) {
@@ -144,7 +144,7 @@ function closeModal() {
 async function deleteEntry(id) {
   if (!confirm('Wirklich löschen?')) return
   try {
-    const res = await fetch(`http://localhost:3000/api/blog-entries/${id}`, {
+    const res = await fetch(`https://ikrasblogapi.solidbooru.online/api/blog-entries/${id}`, {
       method: 'DELETE',
       credentials: 'include'
     })

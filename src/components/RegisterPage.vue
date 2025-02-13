@@ -33,7 +33,7 @@
     successMessage.value = ''
   
     try {
-      const response = await fetch('http://localhost:3000/api/register', {
+      const response = await fetch('https://ikrasblogapi.solidbooru.online/api/register', {
         method: 'POST',
         credentials: 'include',
         headers: { 'Content-Type': 'application/json' },
