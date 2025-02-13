@@ -37,6 +37,13 @@ app.use(session({
   }
 }));
 
+const cors = require('cors');
+
+app.use(cors({
+  origin: true,
+  credentials: true
+}));
+
 // SQLite init
 let db;
 (async () => {
