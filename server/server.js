@@ -19,7 +19,7 @@ app.use(express.json());
 
 // CORS (Sessions erlauben)
 app.use(cors({
-  origin: ['https://ikrasblog.solidbooru.online'], // oder ['http://localhost:5173'] etc.
+  origin: true, // oder ['http://localhost:5173'] etc.
   credentials: true
 }));
 
