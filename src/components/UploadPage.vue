@@ -51,7 +51,7 @@
     formData.append('caption', newCaption.value)
   
     try {
-      const res = await fetch('http://localhost:3000/api/blog-entries', {
+      const res = await fetch('https://ikrasblogapi.solidbooru.online/api/blog-entries', {
         method: 'POST',
         body: formData,
         credentials: 'include'
